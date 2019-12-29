@@ -53,6 +53,7 @@ public class NewDraft extends Fragment {
 
         //Save and go back on
         getView().findViewById(R.id.back_btn).setOnClickListener(backButtonListener);
+        getView().findViewById(R.id.save_btn).setOnClickListener(saveListener);
     }
 
     private void goBack() {
@@ -61,7 +62,7 @@ public class NewDraft extends Fragment {
 
     private void saveDraft() {
         //Save new draft to local DB
-        Toast.makeText(getActivity(), "Your draft is saved.", 3);
+        Toast.makeText(getContext(), "Your draft is saved.", Toast.LENGTH_LONG).show();
     }
 
 }
