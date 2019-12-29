@@ -60,7 +60,7 @@ public class MainFragment extends Fragment {
                 setUI();
             }
         };
-        getView().findViewById(R.id.addNew).setOnClickListener(onAddNewClick);
+        getView().findViewById(R.id.book1LayoutImg).setOnClickListener(onAddNewClick);
     }
 
 
