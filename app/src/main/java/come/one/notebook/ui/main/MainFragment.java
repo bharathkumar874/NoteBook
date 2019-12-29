@@ -53,7 +53,16 @@ public class MainFragment extends Fragment {
 
         RelativeLayout book2Layout = getView().findViewById(R.id.book3LayoutImg);
         setNoteBookStyle(book2Layout, "#fad35e", "#f76d1b");
+
+        View.OnClickListener onAddNewClick = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setUI();
+            }
+        };
+        getView().findViewById(R.id.addNew).setOnClickListener(onAddNewClick);
     }
+
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void setNoteBookStyle(RelativeLayout bookLayout, String startColor, String endColor) {
@@ -87,6 +96,15 @@ public class MainFragment extends Fragment {
                 3f, 3f, 10f, 10f, 10f, 10f, 3f, 3f
         });
         return gd;
+    }
+
+    private void setUI() {
+        NewDraft newDraft = NewDraft.newInstance();
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, newDraft, "newDraftFragment")
+                .addToBackStack(null)
+                .commit();
     }
 
 }
