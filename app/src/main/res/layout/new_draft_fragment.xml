@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textbox_layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.main.NewDraft">
+
+    <RelativeLayout
+        android:id="@+id/new_draft_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/left_arrow"></ImageView>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/draft_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/new_draft_header"
+        android:layout_marginTop="-2dp"
+        android:gravity="top"
+        android:hint="Start writing . . ."
+        android:paddingTop="10dp"></EditText>
+
+    <TextView
+        android:id="@+id/save_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@id/draft_text"
+        android:layout_alignParentRight="true"
+        android:background="@xml/fab_circle"
+        android:gravity="center"
+        android:elevation="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        ></TextView>
+</RelativeLayout>
